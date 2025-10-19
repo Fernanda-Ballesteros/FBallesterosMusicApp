@@ -53,6 +53,9 @@ fun HomeScreen(navController: NavController) {
     var albums by remember { mutableStateOf(listOf<Album>()) }
     var loading by remember { mutableStateOf(true) }
 
+
+
+
     LaunchedEffect(true) {
         try {
             val retrofit = Retrofit.Builder()
@@ -69,6 +72,7 @@ fun HomeScreen(navController: NavController) {
             loading = false
         }
     }
+
 
     if (loading) {
         Box(
@@ -143,6 +147,7 @@ fun HomeScreen(navController: NavController) {
             }
         ) { innerPadding ->
 
+
             LazyColumn(
                 modifier = Modifier
                     .fillMaxSize()
@@ -150,6 +155,7 @@ fun HomeScreen(navController: NavController) {
                     .padding(innerPadding)
                     .padding(8.dp)
             ) {
+
 
                 item {
                     Box(

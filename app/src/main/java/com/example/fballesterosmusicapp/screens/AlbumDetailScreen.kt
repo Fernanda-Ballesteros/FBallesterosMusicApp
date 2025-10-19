@@ -63,6 +63,9 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
         }
     }
 
+
+
+
     if (loading) {
         Box(
             modifier = Modifier.fillMaxSize(),
@@ -72,9 +75,11 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
         }
         return
     } else {
+
         Scaffold(
             containerColor = PrimaryColor,
             bottomBar = {
+
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -99,6 +104,7 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
                             contentScale = ContentScale.Crop
                         )
 
+
                         Column(
                             modifier = Modifier
                                 .padding(start = 12.dp)
@@ -117,6 +123,7 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
                             )
                         }
 
+
                         IconButton(
                             onClick = { },
                             modifier = Modifier
@@ -134,6 +141,7 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
                     }
                 }
             }
+
         ) { innerPadding ->
             LazyColumn(
                 modifier = Modifier
