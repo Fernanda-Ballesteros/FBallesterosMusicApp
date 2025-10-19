@@ -151,7 +151,6 @@ fun HomeScreen(navController: NavController) {
                     .padding(8.dp)
             ) {
 
-                // Header
                 item {
                     Box(
                         modifier = Modifier
@@ -208,7 +207,7 @@ fun HomeScreen(navController: NavController) {
                     }
                 }
 
-                // Albums Section
+
                 item {
                     Row(
                         modifier = Modifier
@@ -296,7 +295,7 @@ fun HomeScreen(navController: NavController) {
                     }
                 }
 
-                // Recently Played Section
+
                 item {
                     Row(
                         modifier = Modifier
@@ -313,7 +312,7 @@ fun HomeScreen(navController: NavController) {
                     }
                 }
 
-                // List of Albums
+
                 items(albums) { album ->
                     Box(
                         modifier = Modifier

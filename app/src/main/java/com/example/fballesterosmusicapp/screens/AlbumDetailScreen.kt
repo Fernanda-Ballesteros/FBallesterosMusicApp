@@ -75,7 +75,6 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
         Scaffold(
             containerColor = PrimaryColor,
             bottomBar = {
-                // Mini reproductor inferior
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -119,7 +118,7 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
                         }
 
                         IconButton(
-                            onClick = { /* TODO: acción play */ },
+                            onClick = { },
                             modifier = Modifier
                                 .size(48.dp)
                                 .clip(CircleShape)
@@ -142,14 +141,14 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
                     .background(PrimaryColor)
                     .padding(innerPadding)
             ) {
-                // Header con imagen del álbum
+
                 item {
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
                             .height(400.dp)
                     ) {
-                        // Imagen de fondo
+
                         AsyncImage(
                             model = album?.image ?: "",
                             contentDescription = album?.title,
@@ -157,7 +156,6 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
                             contentScale = ContentScale.Crop
                         )
 
-                        // Scrim gradient oscuro
                         Box(
                             modifier = Modifier
                                 .fillMaxSize()
@@ -171,7 +169,7 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
                                 )
                         )
 
-                        // Botones superiores
+
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -205,7 +203,7 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
                             }
                         }
 
-                        // Título, artista y botones de acción
+
                         Column(
                             modifier = Modifier
                                 .align(Alignment.BottomStart)
@@ -224,14 +222,14 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
                                 modifier = Modifier.padding(top = 4.dp)
                             )
 
-                            // Botones Play y Shuffle
+
                             Row(
                                 modifier = Modifier.padding(top = 16.dp),
                                 horizontalArrangement = Arrangement.spacedBy(12.dp)
                             ) {
-                                // Botón Play principal (morado)
+
                                 IconButton(
-                                    onClick = { /* TODO: Play album */ },
+                                    onClick = {  },
                                     modifier = Modifier
                                         .size(56.dp)
                                         .background(Color(0xFF7B5FCC), CircleShape)
@@ -244,9 +242,9 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
                                     )
                                 }
 
-                                // Botón Shuffle (blanco)
+
                                 IconButton(
-                                    onClick = { /* TODO: Shuffle */ },
+                                    onClick = { },
                                     modifier = Modifier
                                         .size(56.dp)
                                         .background(Color.White, CircleShape)
@@ -263,7 +261,7 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
                     }
                 }
 
-                // About this album card
+
                 item {
                     Box(
                         modifier = Modifier
@@ -291,7 +289,6 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
                     }
                 }
 
-                // Artist chip
                 item {
                     Box(
                         modifier = Modifier
@@ -316,7 +313,7 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
                     }
                 }
 
-                // Lista de 10 canciones ficticias
+
                 items((1..10).toList()) { trackNumber ->
                     Box(
                         modifier = Modifier
@@ -358,7 +355,7 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
                             }
 
                             IconButton(
-                                onClick = { /* TODO: More options */ },
+                                onClick = {  },
                                 modifier = Modifier.size(40.dp)
                             ) {
                                 Icon(
@@ -371,7 +368,6 @@ fun AlbumDetailScreen(albumId: String, navController: NavController) {
                     }
                 }
 
-                // Espacio adicional al final
                 item {
                     Spacer(modifier = Modifier.height(16.dp))
                 }
